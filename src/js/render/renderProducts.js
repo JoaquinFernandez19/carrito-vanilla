@@ -1,0 +1,1 @@
+const renderProducts = (state) => {};

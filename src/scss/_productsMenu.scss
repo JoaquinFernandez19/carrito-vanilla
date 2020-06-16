@@ -1,0 +1,51 @@
+@import 'mixins';
+
+.productsMenu {
+  @include border();
+  font-size: 2em;
+  min-height: 800px;
+}
+
+.categories {
+  @include genericSizing();
+  border-right: 1px solid black;
+  h2 {
+    border-bottom: 1px solid black;
+    padding-bottom: 8.5px;
+  }
+  .list-group {
+    margin-top: 50px;
+  }
+  .list-group-item {
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.9em;
+    &:hover {
+      background-color: rgb(85, 83, 83);
+      color: white;
+    }
+  }
+}
+.products {
+  @include genericSizing();
+}
+.products-title {
+  @include productRow();
+}
+.products-category-selected {
+  font-size: 0.8em;
+  height: 40px;
+  @include productRow();
+  @include flex(row, center, flex-start);
+  span.badge {
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 0px 5px 5px 5px;
+  }
+  .close-category {
+    font-size: 1.2em;
+    &:hover {
+      color: red;
+    }
+  }
+}
