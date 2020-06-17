@@ -14,11 +14,14 @@ const renderSelectedCategories = (state) => {
     let text = document.createTextNode(item);
     closeSymbolNode.appendChild(closeSymbol);
     closeSymbolNode.classList.add('close-category');
+
+    //Event listeners to cancel category
     closeSymbolNode.addEventListener('click', () => {
       let text = getFirstWord(node.textContent);
       let temp = state.categoriesSelected.filter((item) => item !== text);
       state.categoriesSelected = temp;
       renderSelectedCategories(state);
+      renderProducts(state);
     });
     node.appendChild(text);
     node.appendChild(closeSymbolNode);

@@ -3,7 +3,6 @@
 }
 @mixin genericSizing() {
   margin-top: 10px;
-  height: calc(900px - 20px);
 }
 @mixin flex($dir, $align, $justify) {
   display: flex;

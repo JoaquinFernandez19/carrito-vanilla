@@ -7,7 +7,7 @@ window.onload = () => {
     categoriesSelected: ['Tazas', 'Remeras', 'Bolsos'],
     products: PRODUCTS,
   };
-  console.log(STATE.products);
+
   renderCategories();
   renderSelectedCategories(STATE);
   categorySelectionListener(STATE, renderSelectedCategories);

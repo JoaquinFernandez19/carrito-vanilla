@@ -3,7 +3,6 @@
 .productsMenu {
   @include border();
   font-size: 2em;
-  min-height: 800px;
 }
 
 .categories {
@@ -12,9 +11,6 @@
   h2 {
     border-bottom: 1px solid black;
     padding-bottom: 8.5px;
-  }
-  .list-group {
-    margin-top: 50px;
   }
   .list-group-item {
     cursor: pointer;
@@ -46,6 +42,33 @@
     font-size: 1.2em;
     &:hover {
       color: red;
+    }
+  }
+}
+.products-row {
+  max-height: 800px;
+  min-height: 800px;
+}
+.product-show {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  grid-auto-rows: auto;
+  justify-items: center;
+  .card {
+    font-size: 0.8em;
+    max-width: 300px;
+    border: 2px solid black;
+    img {
+      height: 250px;
+    }
+    .card-text {
+      color: red;
+      i {
+        font-size: 0.7em;
+        position: relative;
+        top: -2px;
+      }
     }
   }
 }
