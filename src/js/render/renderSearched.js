@@ -4,7 +4,7 @@ const createSearchedTermBadge = (term, state) => {
   //
   let badge = document.createElement('span');
   badge.classList.add('badge', 'badge-info');
-  badge.textContent = term;
+  badge.textContent = titleCase(term);
   //cancel term
   let closeSymbolNode = document.createElement('span');
   let closeSymbol = document.createTextNode(' ×');

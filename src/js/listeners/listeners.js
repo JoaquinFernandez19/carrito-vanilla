@@ -49,7 +49,7 @@ const formListeners = (state) => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     if (!searchInput.disabled && searchInput.value !== '') {
-      state.searchTerm = searchInput.value;
+      state.searchTerm = searchInput.value.toLowerCase();
       renderProducts(state);
       container.appendChild(createSearchedTermBadge(state.searchTerm, state));
       searchInput.value = '';

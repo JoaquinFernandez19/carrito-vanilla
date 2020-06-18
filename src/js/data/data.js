@@ -1,6 +1,6 @@
 const PRODUCTS = [
   {
-    name: 'Taza StarWars',
+    name: 'taza starwars',
     type: 'Tazas',
     bestseller: true,
     src:
@@ -9,7 +9,7 @@ const PRODUCTS = [
     price: 20,
   },
   {
-    name: 'Taza Totoro',
+    name: 'taza totoro',
     bestseller: true,
     type: 'Tazas',
     src:
@@ -18,7 +18,7 @@ const PRODUCTS = [
     price: 25,
   },
   {
-    name: 'Taza Matematica',
+    name: 'taza matematica',
     bestseller: false,
     type: 'Tazas',
     src: 'https://s.fenicio.app/f/mipeuy/catalogo/articulos/17737.19-1_460x460_1568812077_4b5.jpg',
@@ -27,7 +27,7 @@ const PRODUCTS = [
   },
 
   {
-    name: 'Remera Spiderman',
+    name: 'remera spiderman',
     bestseller: false,
     type: 'Remeras',
     src:
@@ -36,7 +36,7 @@ const PRODUCTS = [
     price: 95,
   },
   {
-    name: 'Remera Basketball',
+    name: 'remera basketball',
     bestseller: true,
     type: 'Remeras',
     src:
@@ -45,7 +45,7 @@ const PRODUCTS = [
     price: 90,
   },
   {
-    name: 'Remera Alien',
+    name: 'remera alien',
     bestseller: false,
     type: 'Remeras',
     src:
@@ -55,7 +55,7 @@ const PRODUCTS = [
   },
 
   {
-    name: 'Bolso Verde',
+    name: 'bolso verde',
     bestseller: false,
     type: 'Bolsos',
     src:
@@ -64,7 +64,7 @@ const PRODUCTS = [
     price: 100,
   },
   {
-    name: 'Bolso Azul',
+    name: 'bolso azul',
     bestseller: false,
     type: 'Bolsos',
     src: 'https://i.pinimg.com/originals/b1/86/1e/b1861e39b048d7b539647236bf80d891.jpg',
@@ -72,7 +72,7 @@ const PRODUCTS = [
     price: 150,
   },
   {
-    name: 'Bolso Rojo',
+    name: 'bolso rojo',
     bestseller: false,
     type: 'Bolsos',
     src:
@@ -82,7 +82,7 @@ const PRODUCTS = [
   },
 
   {
-    name: 'Cuadro Leon',
+    name: 'cuadro leon',
     bestseller: false,
     type: 'Cuadros',
     src: 'https://cdn.shopify.com/s/files/1/2584/0152/products/product-image-911870333.jpg',
@@ -90,7 +90,7 @@ const PRODUCTS = [
     price: 340,
   },
   {
-    name: 'Cuadro Flores',
+    name: 'cuadro flores',
     bestseller: false,
     type: 'Cuadros',
     src: 'https://www.estiloydeco.com/wp-content/uploads/2019/04/cuadros-decorativos-10.jpg',
@@ -98,7 +98,7 @@ const PRODUCTS = [
     price: 450,
   },
   {
-    name: 'Cuadro Abstracto',
+    name: 'cuadro abstracto',
 
     bestseller: true,
     type: 'Cuadros',
@@ -108,7 +108,7 @@ const PRODUCTS = [
     price: 200,
   },
   {
-    name: 'Bicicleta Niño',
+    name: 'bicicleta niño',
     bestseller: false,
     type: 'Bicicletas',
     src: 'https://cdn.shopify.com/s/files/1/2324/7983/products/amarilla_frontal_1800x.png',
@@ -116,7 +116,7 @@ const PRODUCTS = [
     price: 550,
   },
   {
-    name: 'Bicicleta Electrica',
+    name: 'bicicleta electrica',
     bestseller: false,
     type: 'Bicicletas',
     src:
@@ -125,7 +125,7 @@ const PRODUCTS = [
     price: 700,
   },
   {
-    name: 'Bicicleta Decoracion',
+    name: 'bicicleta decoracion',
     bestseller: false,
     type: 'Bicicletas',
     src: 'https://images-na.ssl-images-amazon.com/images/I/71y4pbYPlXL._AC_SX522_.jpg',

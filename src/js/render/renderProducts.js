@@ -1,35 +1,52 @@
 const renderProducts = (state) => {
+  //container of all products
   const container = document.querySelector('.product-show');
+  //clear container after each rendering
   removeAllChildNodes(container);
+  //console logs for dev purposes
   console.log('Rendering products');
   console.log(state);
+  //order type checkup
   if (state.order === 'low-to-high') {
+    //if order is set low to high, sort the array with a helper function
     state.products.sort(priceSortingLowToHigh);
   } else if (state.order === 'high-to-low') {
+    //if order is set to high to low, sort the array with a helper function
     state.products.sort(priceSortingHighToLow);
   }
-  state.products.map((item, index, arr) => {
+  //map the products array
+  state.products.map((item) => {
     if (
+      //render only the items with the categories seledcted
       state.categoriesSelected.indexOf(item.type) !== -1 ||
+      //or render everything if no category is selected
       state.categoriesSelected.length === 0
     ) {
+      //if the user didnt search for anything just render normally
       if (state.searchTerm === null) {
         container.appendChild(
           createProductElement(item.name, item.price, item.src, item.bestseller)
         );
+        //if the user searched
       } else if (state.searchTerm !== null) {
+        //if the term searched by the user is found, render the matching items
         if (item.name.indexOf(state.searchTerm) !== -1) {
           container.appendChild(
             createProductElement(item.name, item.price, item.src, item.bestseller)
           );
         } else {
+          //if no item were found with the term, say No items were found
+          if (container.children.length === 0) {
+            container.textContent = 'No items were found';
+          }
+          //if the curr item name dont match, dont render
           return null;
         }
       }
     }
   });
 };
-
+//function to render the products
 const createProductElement = (name, price, img, bestseller) => {
   //card
   let cardDiv = document.createElement('div');
@@ -45,7 +62,7 @@ const createProductElement = (name, price, img, bestseller) => {
   //cardtitle h5
   let cardTitle = document.createElement('h5');
   cardTitle.classList.add('card-title');
-  cardTitle.textContent = name;
+  cardTitle.textContent = titleCase(name);
   //card title badge
   if (bestseller) {
     let bestSellerBadge = document.createElement('span');
