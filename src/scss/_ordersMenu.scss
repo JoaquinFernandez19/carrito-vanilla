@@ -2,15 +2,18 @@
 
 .ordersMenu {
   @include border();
-  min-height: 60vh;
+  min-height: 20vh;
 }
 .buyBtn {
-  height: 100px;
-  font-size: 50px;
+  font-size: 20px;
   color: white;
   background-color: red;
   &:hover {
     background-color: black;
     color: white;
   }
+}
+.orders-title {
+  @include productRow();
+  @include genericSizing();
 }

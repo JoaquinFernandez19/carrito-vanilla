@@ -1,24 +1,54 @@
 const renderProducts = (state) => {
   const container = document.querySelector('.product-show');
-  let currArray = state.products.map((item) => {
-    if (state.categoriesSelected.indexOf(item.product) !== -1) {
-      item.list.map((innerItem) => {
-        console.log(innerItem.name);
-      });
+  removeAllChildNodes(container);
+  console.log('Rendering products');
+  if (state.order === 'low-to-high') {
+    state.products.sort(priceSortingLowToHigh);
+  } else if (state.order === 'high-to-low') {
+    state.products.sort(priceSortingHighToLow);
+  }
+
+  state.products.map((item, index, arr) => {
+    if (
+      state.categoriesSelected.indexOf(item.type) !== -1 ||
+      state.categoriesSelected.length === 0
+    ) {
+      container.appendChild(createProductElement(item.name, item.price, item.src));
     }
   });
 };
 
-/* 
-<div class="card">
-<img
-class="card-img-top"
-src="https://lh3.googleusercontent.com/proxy/16LCpzW6NrBTXcpoTIR9RU0mN3aez5_97O36sCOAn4FhYMDUhVDJfQlm8M7M4ID07vLoZJmpQmJoXohy6u5pHF4_TZpIPHtn03ZRC3vLWeg3wIh8u-LrvawkR7E"
-alt="Card image cap"
-/>
-<div class="card-body">
-<h5 class="card-title">Taza Verde</h5>
-<p class="card-text">30 <i class="fa fa-diamond"></i></p>
-<a href="#" class="btn btn-primary">Add To Cart</a>
-</div>
-                        */
+const createProductElement = (name, price, img) => {
+  //card
+  let cardDiv = document.createElement('div');
+  cardDiv.classList.add('card');
+  //img
+  let imgNode = document.createElement('img');
+  imgNode.classList.add('card-img-top');
+  imgNode.setAttribute('src', img);
+  imgNode.setAttribute('alt', name);
+  //card body
+  let cardBody = document.createElement('div');
+  cardBody.classList.add('card-body');
+  //cardtitle h5
+  let cardTitle = document.createElement('h5');
+  cardTitle.classList.add('card-title');
+  cardTitle.textContent = name;
+  //cardtext p
+  let cardText = document.createElement('p');
+  cardText.classList.add('card-text');
+  cardText.innerHTML = `${price} <i class="fa fa-diamond"></i>`;
+  //card button
+  let cardBtn = document.createElement('button');
+  cardBtn.classList.add('btn', 'btn-primary');
+  cardBtn.textContent = 'Add To Cart';
+  cardBtn.addEventListener('click', () => console.log('Agregado al carrito' + name));
+  //combine
+  cardBody.appendChild(cardTitle);
+  cardBody.appendChild(cardText);
+  cardBody.appendChild(cardBtn);
+  cardDiv.appendChild(imgNode);
+  cardDiv.appendChild(cardBody);
+
+  return cardDiv;
+};

@@ -30,11 +30,12 @@
 }
 .products-category-selected {
   font-size: 0.8em;
-  height: 40px;
+  min-height: 40px;
+  max-height: 150px;
   @include productRow();
   @include flex(row, center, flex-start);
   span.badge {
-    margin: 0 10px;
+    margin: 10px 10px;
     cursor: pointer;
     padding: 0px 5px 5px 5px;
   }
@@ -70,5 +71,19 @@
         top: -2px;
       }
     }
+  }
+}
+
+@media (max-width: 810px) {
+  .product-show {
+    grid-template-columns: 1fr 1fr;
+    .card img {
+      height: 180px;
+    }
+  }
+}
+@media (max-width: 982px) {
+  .categories {
+    border: none;
   }
 }

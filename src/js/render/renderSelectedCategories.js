@@ -1,8 +1,3 @@
-const removeAllChildNodes = (parent) => {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-};
 const renderSelectedCategories = (state) => {
   const selectedContainer = document.querySelector('.products-category-selected');
   let selectedCategories = state.categoriesSelected;

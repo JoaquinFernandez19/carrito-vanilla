@@ -1,5 +1,5 @@
 const renderCategories = () => {
-  const categories = ['Tazas', 'Remeras', 'Bolsos'];
+  const categories = ['Tazas', 'Remeras', 'Bolsos', 'Cuadros', 'Bicicletas'];
   const ul = document.querySelector('.category-ul');
   for (let i = 0; i < categories.length; i++) {
     let node = document.createElement('li');
