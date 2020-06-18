@@ -41,3 +41,19 @@ const highToLowBtn = (state) => {
     }
   });
 };
+
+const formListeners = (state) => {
+  const form = document.querySelector('form');
+  const searchInput = document.querySelector('#product-input');
+  const container = document.querySelector('.searched-term');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!searchInput.disabled && searchInput.value !== '') {
+      state.searchTerm = searchInput.value;
+      renderProducts(state);
+      container.appendChild(createSearchedTermBadge(state.searchTerm, state));
+      searchInput.value = '';
+      searchInput.disabled = true;
+    }
+  });
+};

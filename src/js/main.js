@@ -32,6 +32,7 @@ window.onload = () => {
     categoriesSelected: [],
     products: PRODUCTS,
     order: 'low-to-high',
+    searchTerm: null,
   };
 
   renderCategories();
@@ -40,4 +41,5 @@ window.onload = () => {
   renderProducts(STATE);
   lowToHighBtn(STATE);
   highToLowBtn(STATE);
+  formListeners(STATE);
 };

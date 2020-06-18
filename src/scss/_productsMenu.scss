@@ -24,6 +24,13 @@
 .order-title {
   @include productRow();
 }
+.searched-term {
+  span {
+    span {
+      cursor: pointer;
+    }
+  }
+}
 .products {
   @include genericSizing();
 }
@@ -69,6 +76,9 @@
       color: white;
       top: -10px;
       position: relative;
+      span {
+        margin-left: 5px;
+      }
     }
     button {
       top: -20px;
@@ -76,7 +86,7 @@
     }
 
     .card-text {
-      color: red;
+      color: rgb(255, 180, 180);
       top: -20px;
       position: relative;
       i {
@@ -97,15 +107,15 @@
 @media (max-width: 1753px) {
   .product-show {
     grid-template-columns: 1fr 1fr;
-    .card img {
-      height: 180px;
-    }
   }
 }
-
 @media (max-width: 1200px) {
   .categories {
     border: none;
+  }
+  .products-row {
+    min-height: 800px;
+    max-height: none;
   }
 }
 @media (max-width: 730px) {

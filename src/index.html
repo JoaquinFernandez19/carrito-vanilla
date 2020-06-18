@@ -19,14 +19,15 @@
     <div class="container-fluid mt-5">
       <div class="row">
         <!--Main product container window-->
-        <div class="col-12 col-xl-9">
+        <div class="col-12 col-xl-9 order-2 order-xl-1">
           <div class="container-fluid productsMenu">
             <div class="row">
+              <!--Category column-->
               <div class="col-12 col-xl-3 text-center categories">
                 <h2>Categorias</h2>
                 <div class="categories-list">
                   <ul class="list-group category-ul"></ul>
-
+                  <!--Order-->
                   <h3 class="mt-3 order-title">Ordenar</h3>
                   <div class="d-xl-flex flex-column">
                     <button class="btn btn-outline-secondary mb-xl-2 lowToHigh active">
@@ -34,8 +35,25 @@
                     </button>
                     <button class="btn btn-outline-secondary highToLow">Precio alto a bajo</button>
                   </div>
+                  <!--Search bar -->
+                  <h3 class="mt-3 order-title">Buscar</h3>
+                  <div class="searched-term mb-2"></div>
+                  <form>
+                    <div class="form-group text-left">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="product-input"
+                        placeholder="Escribe algo..."
+                      />
+                      <button type="submit" class="btn btn-outline-danger btn-block mt-2">
+                        Buscar
+                      </button>
+                    </div>
+                  </form>
                 </div>
               </div>
+              <!--Products column-->
               <div class="col-12 col-xl-9 text-center products">
                 <!--Title products-->
                 <div class="row">
@@ -59,7 +77,7 @@
         </div>
         <!--Main product container window end-->
         <!--Shopping list container -->
-        <div class="col-12 col-xl-3 mt-2 mt-xl-0">
+        <div class="col-12 col-xl-3 mt-2 mb-xl-0 mb-5 mt-xl-0 order-1 order-xl-2">
           <div class="container-fluid">
             <div class="row">
               <div class="col-12 ordersMenu">
