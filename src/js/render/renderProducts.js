@@ -7,8 +7,7 @@ const renderProducts = (state) => {
   } else if (state.order === 'high-to-low') {
     state.products.sort(priceSortingHighToLow);
   }
-
-  state.products.map((item, index, arr) => {
+  state.products.map((item) => {
     if (
       state.categoriesSelected.indexOf(item.type) !== -1 ||
       state.categoriesSelected.length === 0
@@ -21,7 +20,7 @@ const renderProducts = (state) => {
 const createProductElement = (name, price, img) => {
   //card
   let cardDiv = document.createElement('div');
-  cardDiv.classList.add('card');
+  cardDiv.classList.add('card', 'bg-dark');
   //img
   let imgNode = document.createElement('img');
   imgNode.classList.add('card-img-top');
@@ -40,8 +39,8 @@ const createProductElement = (name, price, img) => {
   cardText.innerHTML = `${price} <i class="fa fa-diamond"></i>`;
   //card button
   let cardBtn = document.createElement('button');
-  cardBtn.classList.add('btn', 'btn-primary');
-  cardBtn.textContent = 'Add To Cart';
+  cardBtn.classList.add('btn', 'btn-light');
+  cardBtn.textContent = 'Agregar al carrito';
   cardBtn.addEventListener('click', () => console.log('Agregado al carrito' + name));
   //combine
   cardBody.appendChild(cardTitle);

@@ -1,3 +1,5 @@
+//Helper functions
+
 const getFirstWord = (string) => {
   return string.substring(0, string.indexOf(' '));
 };

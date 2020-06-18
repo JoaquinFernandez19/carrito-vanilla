@@ -20,7 +20,7 @@ const renderSelectedCategories = (state) => {
     });
     node.appendChild(text);
     node.appendChild(closeSymbolNode);
-    node.classList.add('badge', 'badge-secondary');
+    node.classList.add('badge', 'badge-danger');
     selectedContainer.appendChild(node);
   });
 };

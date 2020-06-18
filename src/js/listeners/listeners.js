@@ -11,7 +11,6 @@ const categorySelectionListener = (state, cb) => {
     });
   });
 };
-
 const lowToHighBtn = (state) => {
   const btn = document.querySelector('.lowToHigh');
   const oppositeBtn = document.querySelector('.highToLow');
