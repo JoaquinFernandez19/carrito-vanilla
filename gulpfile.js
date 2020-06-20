@@ -44,18 +44,19 @@ function html() {
 }
 
 //watch changes
-function watch() {
-  browserSync.init({
-    server: {
-      baseDir: './dist',
-    },
-  });
-  gulp.watch('src/scss/*.scss', scssTask);
-  gulp.watch('src/js/*.js', jsBuild);
-  gulp.watch('src/js/**/*.js', jsBuild);
-  gulp.watch('src/*.html', html);
-  gulp.watch('src/*.html').on('change', browserSync.reload);
-  gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
-}
+//function watch() {
+//  browserSync.init({
+//    server: {
+//      baseDir: './dist',
+//    },
+//  });
+//  gulp.watch('src/scss/*.scss', scssTask);
+// gulp.watch('src/js/*.js', jsBuild);
+//  gulp.watch('src/js/**/*.js', jsBuild);
+//  gulp.watch('src/*.html', html);
+// gulp.watch('src/*.html').on('change', browserSync.reload);
+// gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
+//}
 
-exports.default = series(scssTask, jsBuild, html, watch);
+//exports.default = series(scssTask, jsBuild, html, watch);
+exports.default = series(scssTask, jsBuild, html);
