@@ -2,7 +2,7 @@
 
 .ordersMenu {
   @include border();
-  min-height: 300px;
+  min-height: 100px;
 }
 .buyBtn {
   font-size: 20px;
@@ -39,22 +39,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 60px;
+  max-width: 70px;
   min-width: 35px;
-  height: 35px;
+  font-size: 1.3em;
+  height: 45px;
   .quantity-controls {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 5px;
     i {
-      font-size: 1.2em;
+      font-size: 1em;
     }
     i:first-child {
-      margin-bottom: -5px;
+      margin-bottom: -7px;
     }
     i:last-child {
-      margin-top: -5px;
+      margin-top: -7px;
     }
   }
 }

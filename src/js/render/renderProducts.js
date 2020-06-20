@@ -36,11 +36,14 @@ const renderProducts = (state) => {
           );
         } else {
           //if no item were found with the term, say No items were found
-          if (container.children.length === 0) {
-            container.textContent = 'No items were found';
-          }
+          setTimeout(() => {
+            if (container.children.length === 0) {
+              console.log(container.children.length);
+              container.textContent = 'No items were found';
+            }
+          }, 500);
+
           //if the curr item name dont match, dont render
-          return null;
         }
       }
     }
@@ -80,7 +83,7 @@ const createProductElement = (name, price, img, id, bestseller, state) => {
   cardBtn.textContent = 'Agregar al carrito';
 
   cardBtn.addEventListener('click', () => {
-    renderOrders(name, price, id, state);
+    handleCreationOfOrders(name, price, id, state);
   });
   //combine
   cardBody.appendChild(cardTitle);

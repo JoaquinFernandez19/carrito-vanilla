@@ -52,7 +52,13 @@ window.onload = () => {
   highToLowBtn(STATE);
   formListeners(STATE);
 
-  //animation on additem
-
+  //final buy
+  document.querySelector('.buyBtn').addEventListener('click', () => {
+    if (STATE.orderList.length !== 0) {
+      alert(JSON.stringify(STATE.orderList));
+      STATE.orderList = [];
+      renderOrders(STATE);
+    }
+  });
   //
 };
