@@ -93,7 +93,8 @@ const PRODUCTS = [
     name: 'cuadro flores',
     bestseller: false,
     type: 'Cuadros',
-    src: 'https://www.estiloydeco.com/wp-content/uploads/2019/04/cuadros-decorativos-10.jpg',
+    src:
+      'https://100cuadrosaloleo.weebly.com/uploads/6/1/8/7/61879109/whatsapp-image-2018-12-09-at-5-14-49-pm.jpeg',
     id: 11,
     price: 450,
   },

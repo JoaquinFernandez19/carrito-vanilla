@@ -40,6 +40,8 @@ window.onload = () => {
     products: PRODUCTS,
     order: 'low-to-high',
     searchTerm: null,
+    orderList: [],
+    totalPrice: 0,
   };
 
   renderCategories();
@@ -49,4 +51,8 @@ window.onload = () => {
   lowToHighBtn(STATE);
   highToLowBtn(STATE);
   formListeners(STATE);
+
+  //animation on additem
+
+  //
 };

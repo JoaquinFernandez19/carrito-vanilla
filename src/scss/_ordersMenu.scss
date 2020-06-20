@@ -7,7 +7,7 @@
 .buyBtn {
   font-size: 20px;
   color: white;
-  background-color: red;
+  background-color: rgb(5, 168, 5);
   &:hover {
     background-color: black;
     color: white;
@@ -16,4 +16,49 @@
 .orders-title {
   @include productRow();
   @include genericSizing();
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2em;
+  i {
+    cursor: pointer;
+  }
+  p {
+    margin: 0;
+  }
+}
+.price {
+  font-size: 1.7em;
+  margin-left: 5px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 60px;
+  min-width: 35px;
+  height: 35px;
+  .quantity-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+    i {
+      font-size: 1.2em;
+    }
+    i:first-child {
+      margin-bottom: -5px;
+    }
+    i:last-child {
+      margin-top: -5px;
+    }
+  }
+}
+
+.total-price {
+  font-size: 2em;
 }

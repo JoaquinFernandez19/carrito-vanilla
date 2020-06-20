@@ -25,14 +25,14 @@ const renderProducts = (state) => {
       //if the user didnt search for anything just render normally
       if (state.searchTerm === null) {
         container.appendChild(
-          createProductElement(item.name, item.price, item.src, item.bestseller)
+          createProductElement(item.name, item.price, item.src, item.id, item.bestseller, state)
         );
         //if the user searched
       } else if (state.searchTerm !== null) {
         //if the term searched by the user is found, render the matching items
         if (item.name.indexOf(state.searchTerm) !== -1) {
           container.appendChild(
-            createProductElement(item.name, item.price, item.src, item.bestseller)
+            createProductElement(item.name, item.price, item.src, item.id, item.bestseller, state)
           );
         } else {
           //if no item were found with the term, say No items were found
@@ -47,7 +47,7 @@ const renderProducts = (state) => {
   });
 };
 //function to render the products
-const createProductElement = (name, price, img, bestseller) => {
+const createProductElement = (name, price, img, id, bestseller, state) => {
   //card
   let cardDiv = document.createElement('div');
   cardDiv.classList.add('card', 'bg-dark');
@@ -78,7 +78,10 @@ const createProductElement = (name, price, img, bestseller) => {
   let cardBtn = document.createElement('button');
   cardBtn.classList.add('btn', 'btn-light');
   cardBtn.textContent = 'Agregar al carrito';
-  cardBtn.addEventListener('click', () => console.log('Agregado al carrito' + name));
+
+  cardBtn.addEventListener('click', () => {
+    renderOrders(name, price, id, state);
+  });
   //combine
   cardBody.appendChild(cardTitle);
   cardBody.appendChild(cardText);
