@@ -13,3 +13,7 @@ The prices, products and quantity update automatically.
 ### I used gulp for uglifyin and processing the files, babel for js and sass as a pre-processor for css.
 
 ### Bootstrap 4.5, popper and jquery.
+
+You can check a live version in here: https://friendly-lovelace-8c496e.netlify.app/
+
+### The app is in SPANISH.
